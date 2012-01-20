@@ -10,7 +10,8 @@ Install manually or using Bundler:
 
 Add :broadworks provider to omniauth builder:
 
+    # configuration for xdp sandbox
     use OmniAuth::Builder do
-      provider :broadworks, 'username', 'password'
+      provider :broadworks, "http://xsp1.xdp.broadsoft.com/com.broadsoft.xsi-actions/v2.0", domain: 'xdp.broadsoft.com'
       # provider ...
     end
