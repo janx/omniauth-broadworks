@@ -1,0 +1,16 @@
+= OmniAuth::Broadworks
+
+OmniAuth stratgies to pull user profile from Broadworks through XSI api.
+
+== Usage
+
+Install manually or using Bundler:
+
+    gem 'omniauth-broadworks'
+
+Add :broadworks provider to omniauth builder:
+
+    use OmniAuth::Builder do
+      provider :broadworks, 'username', 'password'
+      # provider ...
+    end
