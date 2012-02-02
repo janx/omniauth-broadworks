@@ -30,7 +30,8 @@ module OmniAuth
         end
 
         def username
-          "#{request['username']}@#{options.domain}" if request['username']
+          return unless request['username']
+          request['username'].index('@') ? request['username'] : [request['username'], options.domain].join('@')
         end
 
         def xml_response
