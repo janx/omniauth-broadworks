@@ -39,7 +39,7 @@ module OmniAuth
         end
 
         def content_of(path)
-          xml_response.search(path).first.content
+          xml_response.search(path).first.try(:content)
         end
     end
   end
